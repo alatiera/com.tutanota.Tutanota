@@ -9,12 +9,15 @@
     "command": "tutanota-desktop",
     "separate-locales": false,
     "finish-args": [
+        "--persist=.config/tutanota-desktop",
         "--share=ipc",
         "--socket=x11",
         "--socket=pulseaudio",
         "--share=network",
         "--filesystem=host",
-        "--socket=system-bus"
+        "--socket=system-bus",
+        "--talk-name=org.freedesktop.Notifications",
+        "--device=dri"
     ],
     "build-options" : {
 	"env": {
